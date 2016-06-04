@@ -12,7 +12,7 @@ set hidden
 set number numberwidth=3
 set wrap linebreak
 set nocompatible
-set clipboard=unnamedplus
+set clipboard=unnamed
 let mapleader = ","
 
 " allow scrolling in vim
