@@ -66,5 +66,3 @@ vnoremap Q <nop>
 
 " Remap block-visual mode to alt-V, and set paste-from-clipboard to C-v
 nnoremap <A-v> <C-v>
-execute pathogen#infect()
-call pathogen#helptags()
