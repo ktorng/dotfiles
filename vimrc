@@ -26,9 +26,29 @@ else
 endif
 let g:DV=expand(g:DV)
 
+" PLUGINS
+" Set everything so vundle can load
 autocmd!
 filetype off
 syntax on
+let &rtp.=','.g:DV.'/bundle/Vundle.vim'
+call vundle#begin(g:DV.'/bundle')
+Plugin 'gmarik/Vundle.vim'
+
+" JS syntax highlighting
+Plugin 'pangloss/vim-javascript'
+
+" mxw's JSX highlighting
+Plugin 'mxw/vim-jsx'
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
+
+" Autocomplete
+Plugin 'Valloric/YouCompleteMe'
+
+" A better status line
+Plugin 'Lokaltog/vim-powerline.git'
+let g:Powerline_stl_path_style='relative'
+let g:Powerline_symbols='compatible'
 
 " better <ESC>
 inoremap jk <ESC>
@@ -46,3 +66,5 @@ vnoremap Q <nop>
 
 " Remap block-visual mode to alt-V, and set paste-from-clipboard to C-v
 nnoremap <A-v> <C-v>
+execute pathogen#infect()
+call pathogen#helptags()
